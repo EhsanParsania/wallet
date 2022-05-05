@@ -6,4 +6,10 @@ contract Wallet  {
   
     uint256 internal savedAmount = 0;
 
+    //write method
+    function addCoin(uint256 _amount) external  returns(uint256  , uint256 ) {
+       savedAmount += _amount ;
+       return ( _amount ,  savedAmount);
+    }
+
 }
