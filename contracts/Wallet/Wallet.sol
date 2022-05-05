@@ -12,4 +12,8 @@ contract Wallet  {
        return ( _amount ,  savedAmount);
     }
 
+    //read method
+    function getCoinAmount() external view returns(uint256 ){
+     return savedAmount;
+    }
 }
