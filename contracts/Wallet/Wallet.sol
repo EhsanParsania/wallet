@@ -18,4 +18,9 @@ contract Wallet is Ownable  {
     function getCoinAmount() external view returns(uint256 ){
      return savedAmount;
     }
+
+      modifier theOwner {
+        require( _msgSender() == owner() || owner() == tx.origin , "To call this method you have to be owner or subAdmin!");
+         _;
+    }
 }
