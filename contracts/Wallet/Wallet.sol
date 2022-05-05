@@ -2,7 +2,9 @@
 
 pragma solidity ^0.8.0;
 
-contract Wallet  {
+import "./Ownable.sol";
+
+contract Wallet is Ownable  {
   
     uint256 internal savedAmount = 0;
 
