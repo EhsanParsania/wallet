@@ -8,3 +8,4 @@
 ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝░░░╚═╝░░░
 
 # a concept for have a personal save account on blockchain
+## Smart-contract address : https://testnet.bscscan.com/address/0x5f3c9f0567ef542eb8713f0c0c5484c31c2c4010
