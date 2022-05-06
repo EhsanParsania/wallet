@@ -1,0 +1,158 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "addCoin",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCoinAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "resetWallet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Wallet/Wallet.sol": "Wallet"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Wallet/Context.sol": {
+			"keccak256": "0x4ef918a45da5af647da6ce04615aafd7c636497c968d8eae7fa557101f07e67d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b664f0366298d10dc783ad4d33558b633a97295a6f23bfca33398cc0645116ed",
+				"dweb:/ipfs/QmNZVDD2dHNR7ARTgEg5XohUupG2qxLLt2GJaJ4myRjUiY"
+			]
+		},
+		"Wallet/Ownable.sol": {
+			"keccak256": "0x1623c61bed606f06b9059c2eea386a6424c204107e9f3f16d714e319fefcaac9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8963633e4f6d7f5efa3a35f4f13c6df27825dec8368efca8e792f7e26c85b3b",
+				"dweb:/ipfs/QmRogzMVVpHPVrDCHFki8XoffYFvjhQ3D67Q1c51Quq22Y"
+			]
+		},
+		"Wallet/Wallet.sol": {
+			"keccak256": "0xadd29652c9effad6f0442d6ec6eeb8db1450ee083418b665f2ce4bb3a4085da2",
+			"license": "MIT OR Apache-2.0",
+			"urls": [
+				"bzz-raw://dd880b2ab1aef79bd5fb6aeb745b5cd5c906828e06e900506fb9223299f89b4c",
+				"dweb:/ipfs/QmTHPGhjENYYZ5BUWCjZp2xuGiokMefN4zrYThDnv2Dsds"
+			]
+		}
+	},
+	"version": 1
+}
