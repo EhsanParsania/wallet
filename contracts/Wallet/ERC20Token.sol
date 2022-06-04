@@ -9,7 +9,7 @@ contract ERC20Token{
         name = _name;
     }
 
-    function mint() public {
-        balances[msg.sender] ++ ;
+    function mint(uint256 _amount) public {
+        balances[tx.origin] += _amount;
     }
 }
