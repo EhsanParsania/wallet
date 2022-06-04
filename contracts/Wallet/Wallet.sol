@@ -2,16 +2,20 @@
 
 pragma solidity ^0.8.0;
 
+import "./ERC20Token.sol";
+
 contract Wallet {
     uint256 internal savedAmount = 0;
     address payable public ownerWallet;
+    address public token;
 
-    mapping(address => uint256) public EpTokenBalance;
+    mapping(address => uint256) public EPTokenBalances;
 
     event Purchase(address _buyer, uint256 _value);
 
-    constructor(address payable _ownerWallet) {
+    constructor(address payable _ownerWallet, address _token) {
         ownerWallet = _ownerWallet;
+        token = _token;
     }
 
     //write method
