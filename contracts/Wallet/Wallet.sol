@@ -30,11 +30,8 @@ contract Wallet {
         return savedAmount;
     }
 
-    modifier theOwner() {
-        require(
-            _msgSender() == owner() || owner() == tx.origin,
-            "To call this method you have to be owner or subAdmin!"
-        );
+    modifier onlyOwner() {
+        require(msg.sender == ownerWallet);
         _;
     }
 }
