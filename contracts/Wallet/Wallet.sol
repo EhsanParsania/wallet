@@ -21,7 +21,7 @@ contract Wallet {
     }
 
     //write method
-    function resetWallet() external {
+    function resetWallet() external onlyOwner {
         savedAmount = 0;
     }
 
