@@ -6,23 +6,58 @@
 	"output": {
 		"abi": [
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "previousOwner",
+						"internalType": "address payable",
+						"name": "_ownerWallet",
 						"type": "address"
 					},
 					{
-						"indexed": true,
 						"internalType": "address",
-						"name": "newOwner",
+						"name": "_token",
 						"type": "address"
 					}
 				],
-				"name": "OwnershipTransferred",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_buyer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "Purchase",
 				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "EPTokenBalances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [
@@ -50,6 +85,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "buyToken",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getCoinAmount",
 				"outputs": [
 					{
@@ -63,10 +105,10 @@
 			},
 			{
 				"inputs": [],
-				"name": "owner",
+				"name": "ownerWallet",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "",
 						"type": "address"
 					}
@@ -82,29 +124,22 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "token",
+				"outputs": [
 					{
 						"internalType": "address",
-						"name": "newOwner",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "transferOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {
-				"owner()": {
-					"details": "Returns the address of the current owner."
-				},
-				"transferOwnership(address)": {
-					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				}
-			},
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
@@ -129,28 +164,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"Wallet/Context.sol": {
-			"keccak256": "0x4ef918a45da5af647da6ce04615aafd7c636497c968d8eae7fa557101f07e67d",
+		"Wallet/ERC20Token.sol": {
+			"keccak256": "0x803fd8b3f2e4312df6ff6b9a4b8d8432a8e1db4aa5797fdbaff8b02a766ca6e5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b664f0366298d10dc783ad4d33558b633a97295a6f23bfca33398cc0645116ed",
-				"dweb:/ipfs/QmNZVDD2dHNR7ARTgEg5XohUupG2qxLLt2GJaJ4myRjUiY"
-			]
-		},
-		"Wallet/Ownable.sol": {
-			"keccak256": "0x1623c61bed606f06b9059c2eea386a6424c204107e9f3f16d714e319fefcaac9",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://a8963633e4f6d7f5efa3a35f4f13c6df27825dec8368efca8e792f7e26c85b3b",
-				"dweb:/ipfs/QmRogzMVVpHPVrDCHFki8XoffYFvjhQ3D67Q1c51Quq22Y"
+				"bzz-raw://edd463fc9a4567e510af4ef20a02ee8513f8c320fef322af7191e49bdc0591fc",
+				"dweb:/ipfs/QmNnUo8txBjBVigoj4Wu6kh5t4srVKbCg6QidAUnKiLCKb"
 			]
 		},
 		"Wallet/Wallet.sol": {
-			"keccak256": "0xadd29652c9effad6f0442d6ec6eeb8db1450ee083418b665f2ce4bb3a4085da2",
+			"keccak256": "0xf69f9fced5620e173e9eac8d06dcd7b92953fd1809913cfd007961b303542e45",
 			"license": "MIT OR Apache-2.0",
 			"urls": [
-				"bzz-raw://dd880b2ab1aef79bd5fb6aeb745b5cd5c906828e06e900506fb9223299f89b4c",
-				"dweb:/ipfs/QmTHPGhjENYYZ5BUWCjZp2xuGiokMefN4zrYThDnv2Dsds"
+				"bzz-raw://e3412e6336a7163dbdf7b832db0d92fdea787f956064db3b6ad2682e7f95af8c",
+				"dweb:/ipfs/Qmc57CdW4873fSPaUJKancoEUEaJM9XQPusEhFnDzgyYN6"
 			]
 		}
 	},

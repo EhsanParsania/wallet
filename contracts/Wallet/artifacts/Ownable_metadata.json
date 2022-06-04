@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Wallet/Ownable.sol": "Ownable"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Wallet/Context.sol": {
+			"keccak256": "0x4ef918a45da5af647da6ce04615aafd7c636497c968d8eae7fa557101f07e67d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b664f0366298d10dc783ad4d33558b633a97295a6f23bfca33398cc0645116ed",
+				"dweb:/ipfs/QmNZVDD2dHNR7ARTgEg5XohUupG2qxLLt2GJaJ4myRjUiY"
+			]
+		},
+		"Wallet/Ownable.sol": {
+			"keccak256": "0xc9b3f0ec8d098bb14524318f5c7a42af6e56365cca4ec6fb3b4b20a87718727c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b8bcda2f92ea689056201bdb427206d4a70565e4f0b9c94c559fad798bfa125",
+				"dweb:/ipfs/QmWEnDEo2FRi1jHYZSccsbUHzKFQWixgBo2Fhm9vjUmZG2"
+			]
+		}
+	},
+	"version": 1
+}
