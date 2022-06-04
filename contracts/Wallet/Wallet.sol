@@ -2,10 +2,17 @@
 
 pragma solidity ^0.8.0;
 
-import "./Ownable.sol";
-
-contract Wallet is Ownable {
+contract Wallet {
     uint256 internal savedAmount = 0;
+    address payable public ownerWallet;
+
+    mapping(address => uint256) public EpTokenBalance;
+
+    event Purchase(address _buyer, uint256 _value);
+
+    constructor(address payable _ownerWallet) {
+        ownerWallet = _ownerWallet;
+    }
 
     //write method
     function addCoin(uint256 _amount) external returns (uint256, uint256) {
