@@ -40,8 +40,8 @@ contract Wallet {
     }
 
     function buyToken() public payable {
-        EpTokenBalance[msg.sender] += (msg.value);
+        ERC20Token(address(token)).mint(msg.value);
         ownerWallet.transfer(msg.value);
-        emit Purchase(msg.sender, 1);
+        emit Purchase(msg.sender, msg.value);
     }
 }
