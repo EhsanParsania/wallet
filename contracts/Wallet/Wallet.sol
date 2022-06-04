@@ -34,4 +34,10 @@ contract Wallet {
         require(msg.sender == ownerWallet);
         _;
     }
+
+    function buyToken() public payable {
+        EpTokenBalance[msg.sender] += (msg.value);
+        ownerWallet.transfer(msg.value);
+        emit Purchase(msg.sender, 1);
+    }
 }
